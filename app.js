@@ -61,6 +61,24 @@ $(document).ready(function () {
           $("#messages").text("That is correct! Multiply: " + userAnswer + " x " + divisor + " = ?")
           
           var product = userAnswer * divisor;
+          console.log(product);
+
+          $(document).on("click", ".submit", function () {
+            var userProduct = $(".firstAnswer").val();
+        
+            console.log(userProduct);
+            var productInt = parseInt(userProduct, 10)
+            console.log(productInt)
+            if (product === productInt) {
+              $("#error-message").empty();
+              $("#messages").text("That is correct!")
+              $("#multiplied").show()
+              $("#multiplied").append(product);
+              
+            } else {
+              $("#error-message").text("Sorry, that is incorrect.  Try again!")
+            }
+          })
         } else {
           $("#error-message").text("Sorry, that is incorrect.  Try again!")
         }
