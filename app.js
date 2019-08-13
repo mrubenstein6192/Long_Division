@@ -25,7 +25,6 @@ $(document).ready(function () {
     var divisor = Math.floor(Math.random() * 9) + 1;
     var dividend = Math.floor(Math.random() * 899) + 100;
   
-    
     $("#divisor").text(divisor);
     $("#dividend").text(dividend);
     $("#multiplied").hide()
@@ -37,9 +36,40 @@ $(document).ready(function () {
     // break dividend into an array to use each digit separately
     const arr = Array.from(String(dividend), Number)
     console.log(arr);
-    var divisor = Math.floor(Math.random() * 9) + 1;
-    var dividend = Math.floor(Math.random() * 899) + 100;
   
+    $("#messages").text("How many times does " + divisor + " divide into " + arr[0] + "? (Hint: 0 is a possible answer!)\n");
+  
+    var answer;
+    console.log(arr[0] / divisor);
+  
+      $(document).on("click", ".submit", function () {
+      console.log("this is clicked")
+  
+      answer = Math.floor(arr[0] / divisor)
+      console.log(answer);
+  
+      var userAnswer = $(".firstAnswer").val();
+        if (userAnswer == answer) {
+          $("#quotient").append(userAnswer);
+          
+          if (userAnswer == 0) {
+            $("#error-message").text("Since your first answer is 0, you can skip this step, but it's good practice for the routine of Long Division!")
+          }
+          else {
+            $("#error-message").empty();
+          }
+          $("#messages").text("That is correct! Multiply: " + userAnswer + " x " + divisor + " = ?")
+          
+          var product = userAnswer * divisor;
+        } else {
+          $("#error-message").text("Sorry, that is incorrect.  Try again!")
+        }
+      })
+    })
+
+
+
+    // calculator stuff not related to anything else
     $(document).on("click", ".calc", function () {
       $(".calculator").show();
       $(".calc").hide();
@@ -59,4 +89,3 @@ $(document).ready(function () {
   
   
   
-})
