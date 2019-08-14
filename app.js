@@ -5,7 +5,7 @@ $(document).ready(function () {
   $("#answer-box").hide();
   $("#box").hide();
 
-  $(document).on("click", "#start", function() {
+  $(document).on("click", ".start", function() {
 
     start();
 
@@ -17,10 +17,16 @@ $(document).ready(function () {
     $("#divisor").show();
     $("#answer-box").show();
     $("#box").show();
+    $("#error-message").empty();
+    $("#quotient").empty();
     var calcButton = $("<button>");
     calcButton.addClass('calc').css("margin", "10px");
     calcButton.text("Show Calculator")
     
+    //restart button
+    var restart = $("<button>");
+    restart.addClass('start')
+    restart.text("Restart");
     // different buttons for each answer
     var b = $("<button>");
     b.addClass('submit')
@@ -173,7 +179,7 @@ $(document).ready(function () {
                         console.log("The answer is " + secondProduct);
             
                         $(document).on("click", ".submitFive", function() {
-                          var userSecondProduct = $(".firstAnswer").val();
+                          var userSecondProduct = $(".fifthAnswer").val();
                           if (userSecondProduct == secondProduct) {
                             if (secondProduct > 9) {
                               $("#secondMult").show();
@@ -186,12 +192,15 @@ $(document).ready(function () {
                             $("#messages").text("Awesome! Time to subtract again: " + newDividend + " - " + secondProduct);
                             $("#error-message").empty();
                             $("#second-error-message").empty();
+                            $("#answer-box").html(sixthInput);
+                            $("#answer-box").append(sixthButton);
+                            $("#answer-box").append(calcButton);
                            
                             var secondDifference = newDividend - secondProduct;
                             console.log(secondDifference);
             
-                            $(document).on("click", ".submit", function() {
-                              var userSecondDifference = $(".firstAnswer").val();
+                            $(document).on("click", ".submitSix", function() {
+                              var userSecondDifference = $(".sixthAnswer").val();
                               if (userSecondDifference == secondDifference) {
                                 $("#secondDifference").show();
                                 $("#secondDifference").append("&nbsp;&nbsp;" + secondDifference);
@@ -207,12 +216,15 @@ $(document).ready(function () {
                                 var thirdDividend = parseInt(thirdDividendString, 10);
                                 console.log(thirdDividend);
                                 $("#error-message").text("How many times does " + divisor + " divide into " + thirdDividend + "?")
-                                $("#second-error-message").hide();
+                                // $("#second-error-message").hide();
+                                $("#answer-box").html(seventhInput);
+                                $("#answer-box").append(seventhButton);
+                                $("#answer-box").append(calcButton);
             
                                 var thirdQuotient = parseInt(thirdDividend/divisor);
                                 console.log(thirdQuotient);
-                                $(document).on("click", ".submit", function() {
-                                  var userThirdQuotient = $(".firstAnswer").val();
+                                $(document).on("click", ".submitSeven", function() {
+                                  var userThirdQuotient = $(".seventhAnswer").val();
                                   var userThirdQuotientInt = parseInt(userThirdQuotient, 10);
                                   console.log(userThirdQuotientInt)
             
@@ -221,12 +233,15 @@ $(document).ready(function () {
                                     $("#messages").text("Correct! Multiply " + thirdQuotient + " x " + divisor);
                                     $("#error-message").empty();
                                     $("#second-error-message").empty();
+                                    $("#answer-box").html(eigthInput);
+                                    $("#answer-box").append(eigthButton);
+                                    $("#answer-box").append(calcButton);
                             
                                     var thirdProduct = divisor * thirdQuotient;
                                     console.log(thirdProduct);
             
-                                    $(document).on("click", ".submit", function() {
-                                      var userThirdProduct = $(".firstAnswer").val();
+                                    $(document).on("click", ".submitEight", function() {
+                                      var userThirdProduct = $(".eigthAnswer").val();
                                       if (userThirdProduct == thirdProduct) {
                                         if (thirdProduct > 9) {
                                           $("#thirdMult").show();
@@ -239,25 +254,28 @@ $(document).ready(function () {
                                         $("#messages").text("Correct! Last subtraction to figure out the remainder: " + thirdDividend + " - " + thirdProduct);
                                         $("#error-message").empty();
                                         $("#second-error-message").empty();
+                                        $("#answer-box").html(ninthInput);
+                                        $("#answer-box").append(ninthButton);
+                                        $("#answer-box").append(calcButton);
                                      
                             var thirdDifference = thirdDividend - thirdProduct;
                             console.log(thirdDifference);
             
-                            $(document).on("click", ".submit", function() {
-                              var userThirdDiff = $(".firstAnswer").val();
+                            $(document).on("click", ".submitNine", function() {
+                              var userThirdDiff = $(".ninthAnswer").val();
                               if (userThirdDiff == thirdDifference) {
                                 $("#thirdDifference").show();
                                 $("#thirdDifference").append("&nbsp;&nbsp;&nbsp;&nbsp" + thirdDifference);
             
                                 if (userThirdDiff == 0) {
                                   $("#messages").text("You did it! Since " + divisor + " divides evenly into " + dividend + ", your remainder is 0!");
-                                  $("#error-message").text("Refresh the page to try another one!");
+                                  $("#error-message").html(restart)
                                   $("#quotient").append(" Remainder: " + thirdDifference);
                                   $("#answer-box").empty();
                                 }
                                 else {
                                 $("#messages").text("You did it! Since " + divisor + " does not divide evely into " + dividend + ", this last number is your remainder. Notice it is placed at the end of your quotient!");
-                                $("#error-message").text("Refresh the page to try another one!");
+                                $("#error-message").html(restart)
                                 $("#quotient").append(" Remainder: " + thirdDifference);
                                 $("#answer-box").empty();
                                 }
