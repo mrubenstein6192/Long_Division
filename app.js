@@ -107,9 +107,9 @@ $(document).ready(function () {
 
           $(document).on("click", ".submitTwo", function () {
             var userProduct = $(".secondAnswer").val();
-            console.log("The user said " + userProduct);
+            console.log("The user said " + userProduct + ". Proceed to subtract.");
             var productInt = parseInt(userProduct, 10)
-            console.log("As an integer: " + productInt)
+      
             if (product == productInt) {
               
               $("#multiplied").show()
@@ -117,19 +117,20 @@ $(document).ready(function () {
               
               $("#error-message").empty();
               var lastUserInput = $(".secondAnswer").val();
-              console.log(lastUserInput);
               $("#messages").text("Correct! Now subtract: " + arr[0] + " - " + lastUserInput)
               $("#multiplied").html("&nbsp; - " + lastUserInput);
 
               var difference = arr[0] - lastUserInput;
-              console.log(difference);
+              console.log("The answer is " + difference);
+              $("#answer-box").html(thirdInput)
+              $("#answer-box").append(thirdButton)
+              $("#answer-box").append(calcButton);
 
-              $(document).on("click", ".submit", function () {
-                var userProduct = $(".firstAnswer").val();
-            
-                console.log(userProduct);
+              $(document).on("click", ".submitThree", function () {
+                var userProduct = $(".thirdAnswer").val();
+                
+                console.log("The user said " + userProduct + ". Proceed to bring down.");
                 var differenceInt = parseInt(userProduct, 10)
-                console.log(differenceInt)
 
                 if (difference == differenceInt) {
                   $("#error-message").empty();
@@ -137,36 +138,41 @@ $(document).ready(function () {
                   $("#difference").show()
                   $("#difference").append(difference);
                   
-                    var newDiff = $(".firstAnswer").val();
-                    console.log(newDiff);
+                    var newDiff = $(".thirdAnswer").val();
                     $("#multiplied").append("↓");
                     $("#difference").append(arr[1]);
                     var newDividendArr = [];
                     var numberString = arr[1].toString();
                     newDividendArr.push(newDiff, numberString);
-                    console.log(newDividendArr);
+                   
                     var newDividendString = newDividendArr.toString().replace(",", "");;
                     var newDividend = parseInt(newDividendString,10);
-                    console.log(newDividend);
+                  
                     $("#error-message").html("How many times does " + divisor + " divide into " + newDividend + "?")
+                    $("#answer-box").html(fourthInput);
+                    $("#answer-box").append(fourthButton);
+                    $("#answer-box").append(calcButton);
                    
                     var newQuotientInt = parseInt(newDividend/divisor);
-                    console.log(newQuotientInt);
-                    $(document).on("click", ".submit", function() {
-                      var userNewQuotient = $(".firstAnswer").val();
+                    console.log("The answer is " + newQuotientInt);
+                    $(document).on("click", ".submitFour", function() {
+                      var userNewQuotient = $(".fourthAnswer").val();
                       var userNewQuotientInt = parseInt(userNewQuotient, 10)
-                      console.log(userNewQuotientInt);
+                      console.log("The user said " + userNewQuotientInt + ". Proceed to multiply.");
             
                       if (userNewQuotientInt == newQuotientInt) {
                         $("#quotient").append(newQuotientInt);
                         $("#messages").text("Correct! Now multiply " + newQuotientInt + " x " + divisor)
                         $("#error-message").empty();
                         $("#second-error-message").empty();
+                        $("#answer-box").html(fifthInput);
+                        $("#answer-box").append(fifthButton);
+                        $("#answer-box").append(calcButton);
                         
                         var secondProduct = divisor * newQuotientInt;
-                        console.log(secondProduct);
+                        console.log("The answer is " + secondProduct);
             
-                        $(document).on("click", ".submit", function() {
+                        $(document).on("click", ".submitFive", function() {
                           var userSecondProduct = $(".firstAnswer").val();
                           if (userSecondProduct == secondProduct) {
                             if (secondProduct > 9) {
