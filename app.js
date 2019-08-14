@@ -29,7 +29,7 @@ $(document).ready(function () {
     restart.text("Restart");
     // different buttons for each answer
     var b = $("<button>");
-    b.addClass('submit')
+    b.addClass('submit');
     b.text("Submit");
     var secondButton = $("<button>");
     secondButton.addClass('submitTwo');
@@ -124,7 +124,7 @@ $(document).ready(function () {
               $("#error-message").empty();
               var lastUserInput = $(".secondAnswer").val();
               $("#messages").text("Correct! Now subtract: " + arr[0] + " - " + lastUserInput)
-              $("#multiplied").html("&nbsp; - " + lastUserInput);
+              $("#multiplied").html("&nbsp;-" + lastUserInput);
 
               var difference = arr[0] - lastUserInput;
               console.log("The answer is " + difference);
@@ -183,11 +183,11 @@ $(document).ready(function () {
                           if (userSecondProduct == secondProduct) {
                             if (secondProduct > 9) {
                               $("#secondMult").show();
-                              $("#secondMult").html("&nbsp; - " + secondProduct);
+                              $("#secondMult").html("&nbsp;-" + secondProduct);
                             }
                             else {
                             $("#secondMult").show();
-                            $("#secondMult").html("&nbsp;&nbsp;&nbsp; - " + secondProduct);
+                            $("#secondMult").html("&nbsp;&nbsp; -" + secondProduct);
                             }
                             $("#messages").text("Awesome! Time to subtract again: " + newDividend + " - " + secondProduct);
                             $("#error-message").empty();
@@ -205,7 +205,7 @@ $(document).ready(function () {
                                 $("#secondDifference").show();
                                 $("#secondDifference").append("&nbsp;&nbsp;" + secondDifference);
                                 $("#messages").text("You got this! Bring down " + arr[2] + " and repeat!")
-                                $("#multiplied").append("↓");
+                                $("#multiplied").append(" ↓");
                                 $("#difference").append("↓");
                                 $("#secondMult").append("↓")
                                 $("#secondDifference").append(arr[2]);
@@ -245,13 +245,13 @@ $(document).ready(function () {
                                       if (userThirdProduct == thirdProduct) {
                                         if (thirdProduct > 9) {
                                           $("#thirdMult").show();
-                                          $("#thirdMult").html("&nbsp;&nbsp;&nbsp;&nbsp; -" + thirdProduct)
+                                          $("#thirdMult").html("&nbsp;&nbsp;&nbsp; -" + thirdProduct)
                                         }
                                         else {
                                           $("#thirdMult").show();
-                                          $("#thirdMult").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - " + thirdProduct)
+                                          $("#thirdMult").html("&nbsp;&nbsp;&nbsp;&nbsp; -" + thirdProduct)
                                         }
-                                        $("#messages").text("Correct! Last subtraction to figure out the remainder: " + thirdDividend + " - " + thirdProduct);
+                                        $("#messages").text("Correct! Last subtraction to figure out the remainder: " + thirdDividend + " -" + thirdProduct);
                                         $("#error-message").empty();
                                         $("#second-error-message").empty();
                                         $("#answer-box").html(ninthInput);
@@ -265,7 +265,7 @@ $(document).ready(function () {
                               var userThirdDiff = $(".ninthAnswer").val();
                               if (userThirdDiff == thirdDifference) {
                                 $("#thirdDifference").show();
-                                $("#thirdDifference").append("&nbsp;&nbsp;&nbsp;&nbsp" + thirdDifference);
+                                $("#thirdDifference").append("&nbsp;&nbsp;&nbsp;" + thirdDifference);
             
                                 if (userThirdDiff == 0) {
                                   $("#messages").text("You did it! Since " + divisor + " divides evenly into " + dividend + ", your remainder is 0!");

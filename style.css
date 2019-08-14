@@ -58,7 +58,19 @@ h1 {
   font-family: "Lexend Tera";
 }
 
-.button {
+#error-message {
+  color: red;
+  font-family: "Red Hat Display";
+  font-weight: bold;
+}
+
+#second-error-message {
+  color: darkblue;
+  font-family: "Nanum Gothic";
+  font-weight: bold;
+}
+
+.start {
   border-radius: 10px;
   border-color: black;
   background-color: green;
@@ -73,14 +85,14 @@ h1 {
   margin: 5px;
 }
 
-.button span {
+.start span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.start span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -89,11 +101,83 @@ h1 {
   transition: 0.5s;
 }
 
-.button:hover span {
+.start:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.start:hover span:after {
   opacity: 1;
   right: 0;
 }
+
+.submit, .submitTwo, .submitThree, .submitFour, .submitFive, .submitSix, .submitSeven, .submitEight, .submitNine {
+  background-color: lightblue;
+  padding: 1px 3px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: maroon;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.submit:hover, .submitTwo:hover, .submitThree:hover, .submitFour:hover, .submitFive:hover, .submitSix:hover, .submitSeven:hover, .submitEight:hover, .submitNine:hover {
+  background-color: maroon;
+  color: lightblue;
+}
+
+.submit:active, .submitTwo:active, .submitThree:active, .submitFour:active, .submitFive:active, .submitSix:active, .submitSeven:active, .submitEight:active, .submitNine:active {
+  background-color: maroon;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.calc, .hideCalc {
+  background-color: lightgoldenrodyellow;
+  padding: 1px 3px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: darkblue;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.calc:hover, .hideCalc:hover{
+  background-color: darkorange;
+  color: black;
+}
+
+.calc:active, .hideCalc:active {
+  background-color: darkorange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* .start{
+  background-color: cornflowerblue;
+  padding: 1px 3px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: darkred;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.start:hover {
+  background-color: skyblue;
+  color: darkgreen;
+}
+
+.start:active {
+  background-color: skyblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
