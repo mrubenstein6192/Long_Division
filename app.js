@@ -269,15 +269,15 @@ $(document).ready(function () {
             
                                 if (userThirdDiff == 0) {
                                   $("#messages").text("You did it! Since " + divisor + " divides evenly into " + dividend + ", your remainder is 0!");
-                                  $("#error-message").html(restart)
                                   $("#quotient").append(" Remainder: " + thirdDifference);
-                                  $("#answer-box").empty();
+                                  $("#error-message").html(restart);
+                                  $("#answer-box").empty()
                                 }
                                 else {
                                 $("#messages").text("You did it! Since " + divisor + " does not divide evely into " + dividend + ", this last number is your remainder. Notice it is placed at the end of your quotient!");
-                                $("#error-message").html(restart)
-                                $("#quotient").append(" Remainder: " + thirdDifference);
-                                $("#answer-box").empty();
+                                $("#quotient").append(" Remainder: " + thirdDifference); 
+                                $("#error-message").html(restart);
+                                $("#answer-box").empty()
                                 }
                               }
                               else {
