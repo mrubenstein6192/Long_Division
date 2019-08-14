@@ -1,20 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Tera');
+
 body, html { 
   /* The image used */
   background-image: url("./images/background.jpg");
 
   /* Full height */
   height: 100%; 
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: lightblue;
   background-blend-mode: multiply;
+  
 }
 
 .container {
   border-radius: 25px;
+  border-color: black;
+  box-shadow: 3px 3px gray;
   background: url("./images/paper-bg.jpg");
   background-position: left top;
   background-repeat: repeat;
@@ -40,6 +47,15 @@ h1 {
   color: white;
   font-weight: bolder;
   font-size: 50px;
+}
+
+#messages{
+  font-family: "Josefin Sans";
+  font-size: large;
+}
+
+#quotient, #divisor, #dividend, #multiplied, #difference, #secondMult, #secondDifference, #thirdMult, #thirdDifference {
+  font-family: "Lexend Tera";
 }
 
 .button {
