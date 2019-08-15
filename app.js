@@ -85,7 +85,7 @@ $(document).ready(function () {
     const arr = Array.from(String(dividend), Number)
     console.log(arr);
   
-    $("#messages").text("How many times does " + divisor + " divide into " + arr[0] + "? (Hint: 0 is a possible answer!)\n");
+    $("#messages").html("How many times does " + divisor + " divide into " + arr[0] + "?" + "<br/>" + "(Hint: 0 is a possible answer!)");
     var answer = Math.floor(arr[0] / divisor)
     console.log("The answer is " + answer);
       $(document).on("click", ".submit", function () {
