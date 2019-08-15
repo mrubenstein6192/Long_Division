@@ -71,8 +71,16 @@ h1 {
 }
 
 #quotient, #divisor, #dividend, #multiplied, #difference, #secondMult, #secondDifference, #thirdMult, #thirdDifference {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier', Courier, monospace;
   font-weight: bold;
+}
+
+#box {
+  border-left: 3px;
+  border-top: 3px;
+  border-style: solid;
+  border-right: none;
+  border-bottom: none;
 }
 
 #error-message {

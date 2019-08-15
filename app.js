@@ -3,6 +3,7 @@ $(document).ready(function () {
   $("#dividend").hide();
   $("#divisor").hide();
   $("#answer-box").hide();
+  $("#calculator-row").hide();
   $("#box").hide();
 
   $(document).on("click", ".start", function() {
@@ -16,13 +17,14 @@ $(document).ready(function () {
     $("#dividend").show();
     $("#divisor").show();
     $("#answer-box").show();
+    $("#calculator-row").show();
     $("#box").show();
     $("#error-message").empty();
     $("#quotient").empty();
     var calcButton = $("<button>");
     calcButton.addClass('calc').css("margin", "10px");
     calcButton.text("Show Calculator")
-    
+    $("#calculator-row").html(calcButton);
     //restart button
     var restart = $("<button>");
     restart.addClass('start')
@@ -69,12 +71,12 @@ $(document).ready(function () {
     // $("#answer-box").append(r)
     $("#answer-box").append(firstInput);
     $("#answer-box").append(b)
-    $("#answer-box").append(calcButton);
+    // $("#answer-box").append(calcButton);
     var divisor = Math.floor(Math.random() * 9) + 1;
     var dividend = Math.floor(Math.random() * 899) + 100;
   
-    $("#divisor").text(divisor);
-    $("#dividend").text(dividend);
+    $("#divisor").html(divisor);
+    $("#dividend").html(dividend);
     $("#multiplied").hide()
     $("#difference").hide();
     $("#secondMult").hide();
@@ -345,16 +347,23 @@ $(document).ready(function () {
       $(".calc").hide();
   
       var hideCalculator = $("<button>");
-      hideCalculator.addClass('hideCalc').css("margin", "10px");;
+      hideCalculator.addClass('hideCalc').css("margin", "10px");
       hideCalculator.text("Hide Calculator");
-      $("#answer-box").append(hideCalculator)
+      $("#calculator-row").html(hideCalculator)
+    })
+
       $(document).on("click", ".hideCalc", function () {
         $(".calculator").hide();
         $(".hideCalc").hide();
-        $(".calc").show();
+
+        var calcButton = $("<button>");
+        calcButton.addClass('calc').css("margin", "10px");
+        calcButton.text("Show Calculator");
+        $("#calculator-row").html(calcButton);
+        
       })
     })
-  })
+  
   
  
   
