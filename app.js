@@ -287,6 +287,7 @@ $(document).ready(function () {
                                 $("#quotient").append(" Remainder: " + thirdDifference); 
                                 $("#error-message").html(restart);
                                 $("#answer-box").empty()
+                                $("#calculator-row").empty();
                                 }
                               }
                               else {
