@@ -263,7 +263,7 @@ $(document).ready(function () {
                                           $("#thirdMult").show();
                                           $("#thirdMult").html("&nbsp;&nbsp; -" + thirdProduct)
                                         }
-                                        $("#messages").text("Correct! Last subtraction to figure out the remainder: " + thirdDividend + " -" + thirdProduct);
+                                        $("#messages").text("Correct! Last subtraction to figure out the remainder: " + thirdDividend + " - " + thirdProduct);
                                         $("#error-message").empty();
                                         $("#second-error-message").empty();
                                         $("#answer-box").html(ninthInput);
@@ -286,7 +286,7 @@ $(document).ready(function () {
                                   $("#answer-box").empty()
                                 }
                                 else {
-                                $("#messages").text("You did it! Since " + divisor + " does not divide evenly into " + dividend + ", this last number is your remainder. Notice it is placed at the end of your quotient!");
+                                $("#messages").text("You did it! Since " + divisor + " does not divide evenly into " + dividend + ", " + thirdDifference + " is your remainder. Notice it is placed at the end of your quotient!");
                                 $("#quotient").append(" Remainder: " + thirdDifference); 
                                 $("#error-message").html(restart);
                                 $("#answer-box").empty()
