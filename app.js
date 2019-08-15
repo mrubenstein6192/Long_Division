@@ -241,11 +241,18 @@ $(document).ready(function () {
                                     console.log(thirdProduct);
             
                                     $(document).on("click", ".submitEight", function() {
+                                      console.log("Second Product: " + secondProduct);
                                       var userThirdProduct = $(".eigthAnswer").val();
                                       if (userThirdProduct == thirdProduct) {
                                         if (thirdProduct > 9) {
+                                          if (secondProduct > 9) {
+                                            $("#thirdMult").show();
+                                            $("#thirdMult").html("&nbsp;-" + thirdProduct);
+                                          }
+                                          else {
                                           $("#thirdMult").show();
-                                          $("#thirdMult").html("&nbsp;&nbsp; -" + thirdProduct)
+                                          $("#thirdMult").html("&nbsp;&nbsp;-" + thirdProduct)
+                                          }
                                         }
                                         else {
                                           $("#thirdMult").show();
