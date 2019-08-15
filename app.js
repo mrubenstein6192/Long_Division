@@ -187,7 +187,7 @@ $(document).ready(function () {
                             }
                             else {
                             $("#secondMult").show();
-                            $("#secondMult").html("&nbsp;&nbsp; -" + secondProduct);
+                            $("#secondMult").html("&nbsp; -" + secondProduct);
                             }
                             $("#messages").text("Awesome! Time to subtract again: " + newDividend + " - " + secondProduct);
                             $("#error-message").empty();
@@ -203,9 +203,9 @@ $(document).ready(function () {
                               var userSecondDifference = $(".sixthAnswer").val();
                               if (userSecondDifference == secondDifference) {
                                 $("#secondDifference").show();
-                                $("#secondDifference").append("&nbsp;&nbsp;" + secondDifference);
+                                $("#secondDifference").append("&nbsp;" + secondDifference);
                                 $("#messages").text("You got this! Bring down " + arr[2] + " and repeat!")
-                                $("#multiplied").append(" ↓");
+                                $("#multiplied").append("↓");
                                 $("#difference").append("↓");
                                 $("#secondMult").append("↓")
                                 $("#secondDifference").append(arr[2]);
@@ -245,11 +245,11 @@ $(document).ready(function () {
                                       if (userThirdProduct == thirdProduct) {
                                         if (thirdProduct > 9) {
                                           $("#thirdMult").show();
-                                          $("#thirdMult").html("&nbsp;&nbsp;&nbsp; -" + thirdProduct)
+                                          $("#thirdMult").html("&nbsp;&nbsp; -" + thirdProduct)
                                         }
                                         else {
                                           $("#thirdMult").show();
-                                          $("#thirdMult").html("&nbsp;&nbsp;&nbsp;&nbsp; -" + thirdProduct)
+                                          $("#thirdMult").html("&nbsp;&nbsp; -" + thirdProduct)
                                         }
                                         $("#messages").text("Correct! Last subtraction to figure out the remainder: " + thirdDividend + " -" + thirdProduct);
                                         $("#error-message").empty();
@@ -265,7 +265,7 @@ $(document).ready(function () {
                               var userThirdDiff = $(".ninthAnswer").val();
                               if (userThirdDiff == thirdDifference) {
                                 $("#thirdDifference").show();
-                                $("#thirdDifference").append("&nbsp;&nbsp;&nbsp;" + thirdDifference);
+                                $("#thirdDifference").append("&nbsp;&nbsp;" + thirdDifference);
             
                                 if (userThirdDiff == 0) {
                                   $("#messages").text("You did it! Since " + divisor + " divides evenly into " + dividend + ", your remainder is 0!");

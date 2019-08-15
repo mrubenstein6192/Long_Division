@@ -55,7 +55,8 @@ h1 {
 }
 
 #quotient, #divisor, #dividend, #multiplied, #difference, #secondMult, #secondDifference, #thirdMult, #thirdDifference {
-  font-family: "Lexend Tera";
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 #error-message {
