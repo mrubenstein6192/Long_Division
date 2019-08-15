@@ -247,7 +247,7 @@ $(document).ready(function () {
                                         if (thirdProduct > 9) {
                                           if (secondProduct > 9) {
                                             $("#thirdMult").show();
-                                            $("#thirdMult").html("&nbsp;-" + thirdProduct);
+                                            $("#thirdMult").html("&nbsp; -" + thirdProduct);
                                           }
                                           else {
                                           $("#thirdMult").show();
