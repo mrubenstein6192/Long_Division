@@ -31,6 +31,9 @@ body, html {
   
 }
 
+.card {
+  height: 100%;
+}
 #disclaimer {
   border-radius: 25px;
   background-color: white;
