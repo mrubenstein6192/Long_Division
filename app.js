@@ -30,7 +30,9 @@ $(document).ready(function () {
     restart.addClass('start')
     restart.text("Restart");
     // different buttons for each answer
-    var b = $("<button>");
+    var b = $("<submit>");
+    b.attr("type", "submit");
+    b.val("Submit");
     b.addClass('submit');
     b.text("Submit");
     var secondButton = $("<button>");
@@ -59,7 +61,7 @@ $(document).ready(function () {
     ninthButton.text("Submit");
 
     // different input field for each answer
-    var firstInput = $('<input>').attr('type', 'number').addClass('firstAnswer').css("margin", "10px");
+    var firstInput = $('<input>').attr('type', 'text').addClass('firstAnswer').css("margin", "10px");
     var secondInput = $('<input>').attr('type', 'number').addClass('secondAnswer').css("margin", "10px");
     var thirdInput = $('<input>').attr('type', 'number').addClass('thirdAnswer').css("margin", "10px");
     var fourthInput = $('<input>').attr('type', 'number').addClass('fourthAnswer').css("margin", "10px");
@@ -90,8 +92,9 @@ $(document).ready(function () {
     $("#messages").html("How many times does " + divisor + " divide into " + arr[0] + "?" + "<br/>" + "(Hint: 0 is a possible answer!)");
     var answer = Math.floor(arr[0] / divisor)
     console.log("The answer is " + answer);
-      $(document).on("click", ".submit", function () {
       
+    $(document).on("click", ".submit", function(event) {
+      event.preventDefault();
       var userAnswer = $(".firstAnswer").val();
       console.log("The user said: " + userAnswer + ".  Proceed to Multiply.");
     

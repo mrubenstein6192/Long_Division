@@ -33,6 +33,7 @@ body, html {
 
 .card {
   height: 100%;
+  
 }
 #disclaimer {
   border-radius: 25px;
@@ -72,7 +73,8 @@ h1 {
 
 #quotient, #divisor, #dividend, #multiplied, #difference, #secondMult, #secondDifference, #thirdMult, #thirdDifference {
   font-family: 'Courier', Courier, monospace;
-  font-weight: bold;
+  font-weight: bolder;
+  letter-spacing: 1px;
 }
 
 #box {
@@ -84,13 +86,14 @@ h1 {
 }
 
 #error-message {
-  color: red;
+  color: black;
   font-family: "Red Hat Display";
+  font-size: large;
   font-weight: bold;
 }
 
 #second-error-message {
-  color: darkblue;
+  color: red;
   font-family: "Nanum Gothic";
   font-weight: bold;
 }
@@ -143,9 +146,10 @@ h1 {
   cursor: pointer;
   outline: none;
   color: maroon;
-  border: none;
+  border-style: solid;
+  border-color: black;
   border-radius: 5px;
-  box-shadow: 2px 2px black;
+  box-shadow: 2px 2px grey;
 }
 
 .submit:hover, .submitTwo:hover, .submitThree:hover, .submitFour:hover, .submitFive:hover, .submitSix:hover, .submitSeven:hover, .submitEight:hover, .submitNine:hover {
@@ -167,7 +171,8 @@ h1 {
   cursor: pointer;
   outline: none;
   color: darkblue;
-  border: none;
+  border-style: solid;
+  border-color: darkblue;
   border-radius: 5px;
   box-shadow: 2px 2px black;
 }
