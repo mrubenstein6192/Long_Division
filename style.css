@@ -172,6 +172,13 @@ h1 {
   transform: translateY(4px);
 }
 
+#first-number, #second-number, #operator, #result {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
 /* .start{
   background-color: cornflowerblue;
   padding: 1px 3px;
