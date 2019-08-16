@@ -11,16 +11,16 @@
 
   <link rel="stylesheet" href="style.css">
   <link
-    href="https://fonts.googleapis.com/css?family=Josefin+Sans|Nanum+Gothic|Libre+Franklin|Lexend+Tera|Red+Hat+Display&display=swap"
+  href="https://fonts.googleapis.com/css?family=Josefin+Sans|Nanum+Gothic|Libre+Franklin|Lexend+Tera|Red+Hat+Display&display=swap"
     rel="stylesheet">
-  <title>Learn Long Division</title>
+  <title>Learn Long Division!</title>
 </head>
 
 <body>
   <div class="container my-4" id="main-container">
     <div class="jumbotron text-center" id="welcome">
       <h1>Ready to Learn Long Division?!</h1>
-      <br><button type="button" class="button my-3 start"><span>Start</span></button>
+      <br><button type="submit" class="button my-3 start" id = "clickMe"><span>Start</span></button>
       <div class="container" id="disclaimer">The most important part of performing long division is the placement of each number along the way. <br>Pay close attention to each step!</div>
     </div>
 
@@ -70,7 +70,25 @@
     
     <div id="second-error-message" class="my-2"></div>
 
-    <div id="answer-box" class="mt-2"></div>
+    <!-- form -->
+    <form autocomplete = "off" id="answer-form"><input type="text" id="answer-box" autofocus>
+      <input id="enterAnswer" type="submit" class = "submit"></form>
+    <form autocomplete = "off" id="answer-formTwo"><input type="text" id="answer-boxTwo">
+      <input id="enterAnswerTwo" type="submit" class = "submit"></form>
+    <form autocomplete = "off" id="answer-formThree"><input type="text" id="answer-boxThree">
+      <input id="enterAnswerThree" type="submit" class = "submit"></form>
+    <form autocomplete = "off" id="answer-formFour"><input type="text" id="answer-boxFour">
+      <input id="enterAnswerFour" type="submit" class = "submit"></form>
+    <form autocomplete = "off" id="answer-formFive"><input type="text" id="answer-boxFive">
+      <input id="enterAnswerFive" type="submit" class = "submit"></form>
+    <form autocomplete = "off" id="answer-formSix"><input type="text" id="answer-boxSix">
+      <input id="enterAnswerSix" type="submit" class = "submit"></form>
+    <form autocomplete = "off" id="answer-formSeven"><input type="text" id="answer-boxSeven">
+      <input id="enterAnswerSeven" type="submit" class = "submit"></form>
+    <form autocomplete = "off" id="answer-formEight"><input type="text" id="answer-boxEight">
+      <input id="enterAnswerEight" type="submit" class = "submit"></form>
+    <form autocomplete = "off" id="answer-formNine"><input type="text" id="answer-boxNine">
+      <input id="enterAnswerNine" type="submit" class = "submit"></form>
 
     <div id = "calculator-row"></div>
   </div>
@@ -125,20 +143,20 @@
       </div>
       <!-- definintion Card -->
       <div class = "col-lg-7">
-        <div class = 'card'>
-          <h3 class="card-header">Helpful Definitions</h3>
-          <div class = "card-body" id = 'definitions'>
-            <ul>
-              <li><strong>Quotient:</strong> a result obtained by dividing one quantity by another <br>(The number on top of the "box")</li><br>
-              <li><strong>Dividend:</strong> a number to be divided by another number <br>(the number inside the "box")</li><br>
-              <li><strong>Divisor:</strong> a number by which another number is to be divided <br>(the number on the left outside the "box")</li>
-            </ul>
+          <div class = 'card'>
+            <h3 class="card-header">Helpful Definitions</h3>
+            <div class = "card-body" id = 'definitions'>
+              <ul>
+                <li><strong>Quotient:</strong> a result obtained by dividing one quantity by another <br>(The number on top of the "box")</li><br>
+                <li><strong>Dividend:</strong> a number to be divided by another number <br>(the number inside the "box")</li><br>
+                <li><strong>Divisor:</strong> a number by which another number is to be divided <br>(the number on the left outside the "box")</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   <script type="text/javascript">
     $(document).ready(function () {
