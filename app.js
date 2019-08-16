@@ -283,7 +283,8 @@ $(document).ready(function () {
                                   $("#messages").html("You did it!" + "<br/>" +  "Since " + divisor + " divides evenly into " + dividend + ", " + "<br/>" + "your remainder is 0!");
                                   $("#quotient").append(" Remainder: " + thirdDifference);
                                   $("#error-message").html(restart);
-                                  $("#answer-box").empty()
+                                  $("#answer-box").empty();
+                                  $("#calculator-row").empty();
                                 }
                                 else {
                                 $("#messages").html("You did it! " + "<br/>" + "Since " + divisor + " does not divide evenly into " + dividend + ", " + "<br/>" + thirdDifference + " is your remainder. Notice it is placed at the end of your quotient!");
