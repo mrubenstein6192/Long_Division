@@ -289,13 +289,13 @@ $(document).ready(function () {
                                 $("#thirdDifference").append("&nbsp;&nbsp;" + thirdDifference);
             
                                 if (userThirdDiff == 0) {
-                                  $("#messages").text("You did it! Since " + divisor + " divides evenly into " + dividend + ", your remainder is 0!");
+                                  $("#messages").html("You did it! Since " + divisor + " divides evenly into " + dividend + ", " + "<br/>" + "your remainder is 0!");
                                   $("#quotient").append(" Remainder: " + thirdDifference);
                                   $("#error-message").html(restart);
                                   $("#answer-box").empty()
                                 }
                                 else {
-                                $("#messages").text("You did it! Since " + divisor + " does not divide evenly into " + dividend + ", " + thirdDifference + " is your remainder. Notice it is placed at the end of your quotient!");
+                                $("#messages").html("You did it! Since " + divisor + " does not divide evenly into " + dividend + ", " + "<br/>" + thirdDifference + " is your remainder. Notice it is placed at the end of your quotient!");
                                 $("#quotient").append(" Remainder: " + thirdDifference); 
                                 $("#error-message").html(restart);
                                 $("#answer-box").empty()
@@ -303,51 +303,60 @@ $(document).ready(function () {
                                 }
                               }
                               else {
-                                $("#error-message").text("Sorry, that is incorrect.  Try again!")
+                                $("#error-message").text("Sorry, that is incorrect.  Try again!");
+                                $("#answer-boxNine").val('')
                               }
                             })
                                       }
                                       else {
-                                        $("#error-message").text("Sorry, that is incorrect.  Try again!")
+                                        $("#error-message").text("Sorry, that is incorrect.  Try again!");
+                                        $("#answer-boxEight").val("");
                                       }
                                     })
                                   } 
                                   else {
-                                    $("#second-error-message").text("Sorry, that is incorrect.  Try again!")
+                                    $("#second-error-message").text("Sorry, that is incorrect.  Try again!");
+                                    $("#answer-boxSeven").val("");
                                   }
                                 })
                               }
                               else {
-                                $("#error-message").text("Sorry, that is incorrect.  Try again!")
+                                $("#error-message").text("Sorry, that is incorrect.  Try again!");
+                                $("#answer-boxSix").val("");
                               }
                             }) 
                           }
                           else {
-                            $("#error-message").text("Sorry, that is incorrect.  Try again!")
+                            $("#error-message").text("Sorry, that is incorrect.  Try again!");
+                            $("#answer-boxFive").val("");
                           }
                         })
                       }
                       else {
                         $("#messages").html("Bring down " + arr[1] + " and repeat!")
                         $("#second-error-message").text("Sorry, that is incorrect.  Try again!")
+                        $("#answer-boxFour").val("");
                     }
                   })
                       
                       }
                    
                    else {
-                  $("#error-message").text("Sorry, that is incorrect.  Try again!")
+                  $("#error-message").text("Sorry, that is incorrect.  Try again!");
+                  $("#answer-boxThree").val("");
                 }
             
               })
               
             }
              else {
-              $("#error-message").text("Sorry, that is incorrect.  Try again!")
+              $("#error-message").text("Sorry, that is incorrect.  Try again!");
+              $("#answer-boxTwo").val("");
             }
           })
         } else {
-          $("#error-message").text("Sorry, that is incorrect.  Try again!")
+          $("#error-message").text("Sorry, that is incorrect.  Try again!");
+          $("#answer-box").val("");
         }
       })
     }
