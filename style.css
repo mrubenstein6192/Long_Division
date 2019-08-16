@@ -85,8 +85,8 @@ h1 {
 
 #quotient, #divisor, #dividend, #multiplied, #difference, #secondMult, #secondDifference, #thirdMult, #thirdDifference {
   font-family: 'Courier', Courier, monospace;
-  font-weight: bolder;
-  letter-spacing: 1px;
+  /* font-weight: bolder;
+  letter-spacing: 1px; */
 }
 
 #box {
