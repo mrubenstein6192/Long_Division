@@ -295,7 +295,7 @@ $(document).ready(function () {
                                   $("#answer-box").empty()
                                 }
                                 else {
-                                $("#messages").text("You did it! Since " + divisor + " does not divide evenly into " + dividend + ", this last number is your remainder. Notice it is placed at the end of your quotient!");
+                                $("#messages").text("You did it! Since " + divisor + " does not divide evenly into " + dividend + ", " + thirdDifference + " is your remainder. Notice it is placed at the end of your quotient!");
                                 $("#quotient").append(" Remainder: " + thirdDifference); 
                                 $("#error-message").html(restart);
                                 $("#answer-box").empty()
