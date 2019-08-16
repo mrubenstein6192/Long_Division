@@ -15,7 +15,6 @@ $(document).ready(function () {
   $("#answer-formNine").hide();
 
   $(document).on("click", ".start", function() {
-
     start();
     $("#answer-box").focus();
   })
@@ -37,7 +36,7 @@ $(document).ready(function () {
     $("#calculator-row").html(calcButton);
     //restart button
     var restart = $("<button>");
-    restart.addClass('start')
+    restart.addClass('restart')
     restart.text("Restart");
    
     var divisor = Math.floor(Math.random() * 9) + 1;
@@ -292,7 +291,8 @@ $(document).ready(function () {
                                   $("#messages").html("You did it! Since " + divisor + " divides evenly into " + dividend + ", " + "<br/>" + "your remainder is 0!");
                                   $("#quotient").append(" Remainder: " + thirdDifference);
                                   $("#error-message").html(restart);
-                                  $("#answer-box").empty()
+                                  $("#answer-box").empty();
+                                  $("#calculator-row").empty();
                                 }
                                 else {
                                 $("#messages").html("You did it! Since " + divisor + " does not divide evenly into " + dividend + ", " + "<br/>" + thirdDifference + " is your remainder. Notice it is placed at the end of your quotient!");
@@ -383,6 +383,11 @@ $(document).ready(function () {
         calcButton.text("Show Calculator");
         $("#calculator-row").html(calcButton);
         
+      })
+
+      $(document).on("click", ".restart", function() {
+        location.reload();
+        start();
       })
     })
   
