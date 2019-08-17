@@ -37,7 +37,7 @@ $(document).ready(function () {
     //restart button
     var restart = $("<button>");
     restart.addClass('restart')
-    restart.text("Restart");
+    restart.text("Try Another!");
    
     var divisor = Math.floor(Math.random() * 9) + 1;
     var dividend = Math.floor(Math.random() * 899) + 100;
