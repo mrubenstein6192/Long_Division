@@ -24,9 +24,9 @@ $(document).ready(function () {
     $(document).bind('scroll',function () { 
          window.scrollTo(0,0); 
     });
-    $(document).unbind('scroll'); 
-    $('body').css({'overflow':'visible'});
-    
+    // $(document).unbind('scroll'); 
+    // $('body').css({'overflow':'visible'});
+
     $("#welcome").hide();
     $("#dividend").show();
     $("#divisor").show();
