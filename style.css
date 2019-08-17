@@ -247,14 +247,14 @@ mark {
 
 @media screen and (max-width: 576px) {
   #calc-card{
-    width: 72%;
+    width: 75%;
   
   }
 }
 
 @media screen and (max-width: 576px) {
   #results-card{
-    width: 28%;
+    width: 25%;
    
   }
 }
