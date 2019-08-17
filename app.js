@@ -20,12 +20,10 @@ $(document).ready(function () {
   })
 
   function start() {
-    // $('body').css({'overflow':'hidden'});
-    // $(document).bind('scroll',function () { 
-    //      window.scrollTo(0,0); 
-    // });
-    // $(document).unbind('scroll'); 
-    // $('body').css({'overflow':'visible'});
+    $('body').css({'overflow':'hidden'});
+  $(document).bind('scroll',function () { 
+       window.scrollTo(0,0); 
+  });
 
     $("#welcome").hide();
     $("#dividend").show();
