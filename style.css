@@ -247,15 +247,22 @@ mark {
 
 @media screen and (max-width: 576px) {
   #calc-card{
-    width: 61%;
-    margin: 0px;
+    width: 65%;
+  
   }
 }
 
 @media screen and (max-width: 576px) {
   #results-card{
-    width: 39%;
-    margin:0px;
+    width: 35%;
+   
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #results-card-header{
+    font-size: 15px;
+  
   }
 }
 /* .start{
