@@ -186,7 +186,8 @@ mark {
   margin-left: 7px;
 } */
 
- .submit:hover, .submitTwo:hover, .submitThree:hover, .submitFour:hover, .submitFive:hover, .submitSix:hover, .submitSeven:hover, .submitEight:hover, .submitNine:hover {
+ .submit:hover, .submitTwo:hover, .submitThree:hover, .submitFour:hover, .submitFive:hover, .submitSix:hover, .submitSeven:hover, .submitEight:hover, .submitNine:hover 
+ {
   background-color: maroon;
   color: lightblue;
 } 
@@ -194,7 +195,7 @@ mark {
 .submit:active, .submitTwo:active, .submitThree:active, .submitFour:active, .submitFive:active, .submitSix:active, .submitSeven:active, .submitEight:active, .submitNine:active {
   background-color: maroon;
   color: skyblue;
-  box-shadow: 0 5px #666;
+  box-shadow: 5px 5px #666;
   transform: translateY(4px);
 } 
 

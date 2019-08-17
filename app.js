@@ -134,11 +134,8 @@ $(document).ready(function () {
                     var newDividendString = newDividendArr.toString().replace(",", "");
                     var newDividend = parseInt(newDividendString,10);
                   
-                    $("#error-message").html("How many times does " + divisor + " <mark>divide</mark> into " + newDividend + "?")
-                    // $("#answer-box").html(fourthInput);
-                    // $("#answer-box").append(fourthButton);
-                    // $("#answer-box").append(calcButton);
-                   
+                    $("#error-message").html("How many times does " + divisor + " <mark>divide</mark> into " + newDividend + "?");
+                    
                     var newQuotientInt = parseInt(newDividend/divisor);
                     console.log("The answer is " + newQuotientInt);
                     $("#enterAnswerFour").on("click", function(event) {
