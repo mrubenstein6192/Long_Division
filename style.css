@@ -247,13 +247,13 @@ mark {
 
 @media screen and (max-width: 576px) {
   #calc-card{
-    width: 60%;
+    width: 63%;
   }
 }
 
 @media screen and (max-width: 576px) {
   #results-card{
-    width: 40%;
+    width: 37%;
   }
 }
 /* .start{
