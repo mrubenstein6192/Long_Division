@@ -114,6 +114,7 @@ mark {
   border-radius: 8px;
 }
 
+
 .restart { 
     border-radius: 10px;
     border-color: black;
@@ -192,6 +193,7 @@ mark {
 
 .submit:active, .submitTwo:active, .submitThree:active, .submitFour:active, .submitFive:active, .submitSix:active, .submitSeven:active, .submitEight:active, .submitNine:active {
   background-color: maroon;
+  color: skyblue;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 } 
