@@ -241,8 +241,20 @@ mark {
 .number:active, .operator:active, .equal:active, .clear:active {
   
     box-shadow: 0 5px #666;
-    transform: translateY(8px);
+    transform: translateY(4px);
   
+}
+
+@media screen and (max-width: 576px) {
+  #calc-card{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #results-card{
+    width: 40%;
+  }
 }
 /* .start{
   background-color: cornflowerblue;
