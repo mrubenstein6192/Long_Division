@@ -17,10 +17,10 @@ $(document).ready(function () {
   $(document).on("click", ".start", function() {
     start();
     $("#answer-box").focus();
+    window.scrollTo(0, 0);
   })
 
   function start() {
-    window.scrollTo(0, 0);
     $("#welcome").hide();
     $("#dividend").show();
     $("#divisor").show();
