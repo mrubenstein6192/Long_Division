@@ -20,10 +20,7 @@ $(document).ready(function () {
   })
 
   function start() {
-    $('body').css({'overflow':'hidden'});
-  $(document).bind('scroll',function () { 
-       window.scrollTo(0,0); 
-  });
+    window.scrollTo(500, 0);
 
     $("#welcome").hide();
     $("#dividend").show();
@@ -69,10 +66,7 @@ $(document).ready(function () {
       console.log("The user said: " + userAnswer + ".  Proceed to Multiply.");
     
         if (userAnswer == answer) {
-          $('body').css({'overflow':'hidden'});
-          $(document).bind('scroll',function () { 
-               window.scrollTo(0,0); 
-          });
+          
           $("#quotient").html(userAnswer);
           $("#answer-form").val("");
           $("#answer-form").hide();
