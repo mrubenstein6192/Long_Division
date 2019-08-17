@@ -356,7 +356,7 @@ $(document).ready(function () {
           })
         } else {
           $("#error-message").text("Sorry, that is incorrect.  Try again!");
-          $("#answer-box").val("");
+          $("#answer-box").val("").focus();
         }
       })
     }
