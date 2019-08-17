@@ -21,7 +21,6 @@ $(document).ready(function () {
 
   function start() {
     window.scrollTo(0, 0);
-
     $("#welcome").hide();
     $("#dividend").show();
     $("#divisor").show();
@@ -66,7 +65,7 @@ $(document).ready(function () {
       console.log("The user said: " + userAnswer + ".  Proceed to Multiply.");
     
         if (userAnswer == answer) {
-          
+          window.scrollTo(0, 0);
           $("#quotient").html(userAnswer);
           $("#answer-form").val("");
           $("#answer-form").hide();
@@ -94,6 +93,7 @@ $(document).ready(function () {
             var productInt = parseInt(userAnswerTwo, 10)
       
             if (product == productInt) {
+              window.scrollTo(0, 0);
               $("#answer-formTwo").hide();
               $("#answer-formThree").show();
               $("#answer-boxThree").focus();
@@ -119,6 +119,7 @@ $(document).ready(function () {
                 var differenceInt = parseInt(userAnswerThree, 10)
 
                 if (difference == differenceInt) {
+                  window.scrollTo(0, 0);
                   $("#error-message").empty();
                   $("#answer-formThree").hide();
                   $("#answer-formFour").show();
