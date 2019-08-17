@@ -61,7 +61,7 @@ $(document).ready(function () {
     const arr = Array.from(String(dividend), Number)
     console.log(arr);
   
-    $("#messages").html("<i><small>To begin Long Division, only divide " + divisor + " into the first digit of " + dividend + ".</small></i>" + "<br/><br/>" + "So, how many times does " + divisor + " <mark>divide</mark> into " + arr[0] + "?" + "<br/>" + "<i><small>(Hint: 0 is a possible answer!)</small></i>");
+    $("#messages").html("<i><small>*To begin Long Division, only divide " + divisor + " into the first digit of " + dividend + "*</small></i>" + "<br/><br/>" + "So, how many times does " + divisor + " <mark>divide</mark> into " + arr[0] + "?" + "<br/>" + "<i><small>(Hint: 0 could be a possible answer!)</small></i>");
     const answer = Math.floor(arr[0] / divisor)
     console.log("The answer is " + answer);
       
