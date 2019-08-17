@@ -54,7 +54,7 @@ $(document).ready(function () {
     const arr = Array.from(String(dividend), Number)
     console.log(arr);
   
-    $("#messages").html("How many times does " + divisor + " <mark>divide</mark> into " + arr[0] + "?" + "<br/>" + "(Hint: 0 is a possible answer!)");
+    $("#messages").html("To begin long division, we only try to divide " + divisor + " into the first digit of the dividend (" + dividend + " in this problem)." + "<br/><br/>" + "So, how many times does " + divisor + " <mark>divide</mark> into " + arr[0] + "?" + "<br/>" + "(Hint: 0 is a possible answer!)");
     const answer = Math.floor(arr[0] / divisor)
     console.log("The answer is " + answer);
       
