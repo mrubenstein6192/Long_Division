@@ -109,6 +109,11 @@ h1 {
   font-weight: bold;
 }
 
+mark {
+  background-color: yellow;
+  border-radius: 8px;
+}
+
 .restart { 
     border-radius: 10px;
     border-color: black;

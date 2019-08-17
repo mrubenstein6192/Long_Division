@@ -54,7 +54,7 @@ $(document).ready(function () {
     const arr = Array.from(String(dividend), Number)
     console.log(arr);
   
-    $("#messages").html("How many times does " + divisor + " divide into " + arr[0] + "?" + "<br/>" + "(Hint: 0 is a possible answer!)");
+    $("#messages").html("How many times does " + divisor + " <mark>divide</mark> into " + arr[0] + "?" + "<br/>" + "(Hint: 0 is a possible answer!)");
     const answer = Math.floor(arr[0] / divisor)
     console.log("The answer is " + answer);
       
@@ -77,7 +77,7 @@ $(document).ready(function () {
             $("#error-message").empty();
           }
            // continue to multiplication step
-          $("#messages").text("That is correct! Multiply: " + answer + " x " + divisor + " = ?")
+          $("#messages").html("That is correct! <mark>Multiply</mark>: " + answer + " x " + divisor + " = ?")
           
           var product = answer * divisor;
           console.log("The answer is: " + product);
@@ -99,7 +99,7 @@ $(document).ready(function () {
               
               $("#error-message").empty();
               // var userAnswer = $("#answer-box").val();
-              $("#messages").text("Correct! Now subtract: " + arr[0] + " - " + productInt)
+              $("#messages").html("Correct! Now <mark>subtract</mark>: " + arr[0] + " - " + productInt)
               $("#multiplied").html("&nbsp;-" + productInt);
 
               var difference = arr[0] - userAnswerTwo;
@@ -134,7 +134,7 @@ $(document).ready(function () {
                     var newDividendString = newDividendArr.toString().replace(",", "");
                     var newDividend = parseInt(newDividendString,10);
                   
-                    $("#error-message").html("How many times does " + divisor + " divide into " + newDividend + "?")
+                    $("#error-message").html("How many times does " + divisor + " <mark>divide</mark> into " + newDividend + "?")
                     // $("#answer-box").html(fourthInput);
                     // $("#answer-box").append(fourthButton);
                     // $("#answer-box").append(calcButton);
@@ -152,7 +152,7 @@ $(document).ready(function () {
                         $("#answer-formFive").show();
                         $("#answer-boxFive").focus();
                         $("#quotient").append(newQuotientInt);
-                        $("#messages").text("Correct! Now multiply " + newQuotientInt + " x " + divisor)
+                        $("#messages").html("Correct! Now <mark>multiply</mark> " + newQuotientInt + " x " + divisor)
                         $("#error-message").empty();
                         $("#second-error-message").empty();
                         // $("#answer-box").html(fifthInput);
@@ -181,7 +181,7 @@ $(document).ready(function () {
                             $("#secondMult").show();
                             $("#secondMult").html("&nbsp; -" + secondProduct);
                             }
-                            $("#messages").text("Awesome! Time to subtract again: " + newDividend + " - " + secondProduct);
+                            $("#messages").html("Awesome! Time to <mark>subtract</mark> again: " + newDividend + " - " + secondProduct);
                             $("#error-message").empty();
                             $("#second-error-message").empty();
                             // $("#answer-box").html(sixthInput);
@@ -211,7 +211,7 @@ $(document).ready(function () {
                                 var thirdDividendString = thirdDividendArr.toString().replace(",", "");
                                 var thirdDividend = parseInt(thirdDividendString, 10);
                                 console.log(thirdDividend);
-                                $("#error-message").text("How many times does " + divisor + " divide into " + thirdDividend + "?")
+                                $("#error-message").html("How many times does " + divisor + " <mark>divide</mark> into " + thirdDividend + "?")
                                 // $("#second-error-message").hide();
                                 // $("#answer-box").html(seventhInput);
                                 // $("#answer-box").append(seventhButton);
@@ -230,7 +230,7 @@ $(document).ready(function () {
                                     $("#answer-formEight").show();
                                     $("#answer-boxEight").focus();
                                     $("#quotient").append(thirdQuotient);
-                                    $("#messages").text("Correct! Multiply " + thirdQuotient + " x " + divisor);
+                                    $("#messages").html("Correct! <mark>Multiply</mark> " + thirdQuotient + " x " + divisor);
                                     $("#error-message").empty();
                                     $("#second-error-message").empty();
                                     // $("#answer-box").html(eigthInput);
@@ -268,7 +268,7 @@ $(document).ready(function () {
                                           $("#thirdMult").show();
                                           $("#thirdMult").html("&nbsp;&nbsp; -" + thirdProduct)
                                         }
-                                        $("#messages").text("Correct! Last subtraction to figure out the remainder: " + thirdDividend + " - " + thirdProduct);
+                                        $("#messages").html("Correct! Last <mark>subtraction</mark> to figure out the remainder: " + thirdDividend + " - " + thirdProduct);
                                         $("#error-message").empty();
                                         $("#second-error-message").empty();
                                         // $("#answer-box").html(ninthInput);
@@ -356,7 +356,7 @@ $(document).ready(function () {
           })
         } else {
           $("#error-message").text("Sorry, that is incorrect.  Try again!");
-          $("#answer-box").val("").focus();
+          $("#answer-box").val("");
         }
       })
     }
@@ -389,6 +389,10 @@ $(document).ready(function () {
         location.reload();
         start();
       })
+
+      // function highlightDivide() {
+
+      // }
     })
   
   
