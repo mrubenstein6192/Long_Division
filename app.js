@@ -20,7 +20,7 @@ $(document).ready(function () {
   })
 
   function start() {
-    window.scrollTo(0, 1000);
+    window.scrollTo(0, 0);
 
     $("#welcome").hide();
     $("#dividend").show();
