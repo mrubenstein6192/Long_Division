@@ -151,11 +151,11 @@ $(document).ready(function () {
                       var userNewQuotientInt = parseInt(userAnswerFour, 10)
                       console.log("The user said " + userAnswerFour + ". Proceed to multiply.");
             
-                      if (userNewQuotientInt == newQuotientInt) {
-                        window.scrollTo(0, 0);
+                      if (userNewQuotientInt == newQuotientInt) { 
                         $("#answer-formFour").hide();
                         $("#answer-formFive").show();
                         $("#answer-boxFive").focus();
+                        window.scrollTo(0, 0);
                         $("#quotient").append(newQuotientInt);
                         $("#messages").html("Correct! Now <mark>multiply</mark> " + newQuotientInt + " x " + divisor)
                         $("#error-message").empty();
