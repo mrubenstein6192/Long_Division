@@ -150,6 +150,7 @@ $(document).ready(function () {
                       console.log("The user said " + userAnswerFour + ". Proceed to multiply.");
             
                       if (userNewQuotientInt == newQuotientInt) {
+                        window.scrollTo(0, 0);
                         $("#answer-formFour").hide();
                         $("#answer-formFive").show();
                         $("#answer-boxFive").focus();
@@ -168,7 +169,7 @@ $(document).ready(function () {
                           event.preventDefault();
                           var userSecondProduct = $("#answer-boxFive").val();
                           if (userSecondProduct == secondProduct) {
-
+                            window.scrollTo(0, 0);
                             if (secondProduct > 9) {
                               $("#answer-formFive").hide();
                               $("#answer-formSix").show();
@@ -197,6 +198,7 @@ $(document).ready(function () {
                               event.preventDefault();
                               var userSecondDifference = $("#answer-boxSix").val();
                               if (userSecondDifference == secondDifference) {
+                                window.scrollTo(0, 0);
                                 $("#answer-formSix").hide();
                                 $("#answer-formSeven").show();
                                 $("#answer-boxSeven").focus();
@@ -228,6 +230,7 @@ $(document).ready(function () {
                                   console.log(userThirdQuotientInt)
             
                                   if (userThirdQuotientInt == thirdQuotient) {
+                                    window.scrollTo(0, 0);
                                     $("#answer-formSeven").hide();
                                     $("#answer-formEight").show();
                                     $("#answer-boxEight").focus();
@@ -247,6 +250,7 @@ $(document).ready(function () {
                                       console.log("Second Product: " + secondProduct);
                                       var userThirdProduct = $("#answer-boxEight").val();
                                       if (userThirdProduct == thirdProduct) {
+                                        window.scrollTo(0, 0);
                                         if (thirdProduct > 9) {
                                           if (secondProduct > 9) {
                                             $("#answer-formEight").hide();
@@ -284,7 +288,7 @@ $(document).ready(function () {
                               event.preventDefault();
                               var userThirdDiff = $("#answer-boxNine").val();
                               if (userThirdDiff == thirdDifference) {
-                               
+                                window.scrollTo(0, 0);
                                 $("#answer-formNine").hide();
                                 $("#thirdDifference").show();
                                 $("#thirdDifference").append("&nbsp;&nbsp;" + thirdDifference);
