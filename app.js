@@ -298,6 +298,7 @@ $(document).ready(function () {
                               var userThirdDiff = $("#answer-boxNine").val();
                               if (userThirdDiff == thirdDifference) {
                                 window.scrollTo(0, 0);
+                                $(".calculator").hide();
                                 $("#answer-formNine").hide();
                                 $("#thirdDifference").show();
                                 $("#thirdDifference").append("&nbsp;&nbsp;" + thirdDifference);
