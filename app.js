@@ -171,11 +171,12 @@ $(document).ready(function () {
                           event.preventDefault();
                           var userSecondProduct = $("#answer-boxFive").val();
                           if (userSecondProduct == secondProduct) {
-                            window.scrollTo(0, 0);
+                           
                             if (secondProduct > 9) {
                               $("#answer-formFive").hide();
                               $("#answer-formSix").show();
                               $("#answer-boxSix").focus();
+                              window.scrollTo(0, 0);
                               $("#secondMult").show();
                               $("#secondMult").html("&nbsp;-" + secondProduct);
                             }
@@ -183,6 +184,7 @@ $(document).ready(function () {
                             $("#answer-formFive").hide();
                             $("#answer-formSix").show();
                             $("#answer-boxSix").focus();
+                            window.scrollTo(0, 0);
                             $("#secondMult").show();
                             $("#secondMult").html("&nbsp; -" + secondProduct);
                             }
@@ -200,10 +202,11 @@ $(document).ready(function () {
                               event.preventDefault();
                               var userSecondDifference = $("#answer-boxSix").val();
                               if (userSecondDifference == secondDifference) {
-                                window.scrollTo(0, 0);
+                                
                                 $("#answer-formSix").hide();
                                 $("#answer-formSeven").show();
                                 $("#answer-boxSeven").focus();
+                                window.scrollTo(0, 0);
                                 $("#secondDifference").show();
                                 $("#secondDifference").append("&nbsp;" + secondDifference);
                                 $("#messages").text("You got this! Bring down " + arr[2] + " and repeat!")
@@ -232,10 +235,11 @@ $(document).ready(function () {
                                   console.log(userThirdQuotientInt)
             
                                   if (userThirdQuotientInt == thirdQuotient) {
-                                    window.scrollTo(0, 0);
+                                   
                                     $("#answer-formSeven").hide();
                                     $("#answer-formEight").show();
                                     $("#answer-boxEight").focus();
+                                    window.scrollTo(0, 0);
                                     $("#quotient").append(thirdQuotient);
                                     $("#messages").html("Correct! <mark>Multiply</mark> " + thirdQuotient + " x " + divisor);
                                     $("#error-message").empty();
@@ -252,12 +256,13 @@ $(document).ready(function () {
                                       console.log("Second Product: " + secondProduct);
                                       var userThirdProduct = $("#answer-boxEight").val();
                                       if (userThirdProduct == thirdProduct) {
-                                        window.scrollTo(0, 0);
+                                       
                                         if (thirdProduct > 9) {
                                           if (secondProduct > 9) {
                                             $("#answer-formEight").hide();
                                             $("#answer-formNine").show();
                                             $("#answer-boxNine").focus();
+                                            window.scrollTo(0, 0);
                                             $("#thirdMult").show();
                                             $("#thirdMult").html("&nbsp; -" + thirdProduct);
                                           }
@@ -265,6 +270,7 @@ $(document).ready(function () {
                                           $("#answer-formEight").hide();
                                           $("#answer-formNine").show();
                                           $("#answer-boxNine").focus();
+                                          window.scrollTo(0, 0);
                                           $("#thirdMult").show();
                                           $("#thirdMult").html("&nbsp;&nbsp;-" + thirdProduct)
                                           }
@@ -273,6 +279,7 @@ $(document).ready(function () {
                                           $("#answer-formEight").hide();
                                           $("#answer-formNine").show();
                                           $("#answer-boxNine").focus();
+                                          window.scrollTo(0, 0);
                                           $("#thirdMult").show();
                                           $("#thirdMult").html("&nbsp;&nbsp; -" + thirdProduct)
                                         }
