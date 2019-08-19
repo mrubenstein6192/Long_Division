@@ -279,7 +279,7 @@ mark {
 }
 @media screen and (max-width: 576px) {
   #messages, #error-message, #second-error-message{
-    font-size: 13px;
+    font-size: 20px;
   
   }
 }
