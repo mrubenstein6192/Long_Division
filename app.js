@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  window.scrollTo(0, 0);
   $("#dividend").hide();
   $("#divisor").hide();
   // $("#answer-box").hide();
