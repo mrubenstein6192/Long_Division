@@ -18,10 +18,11 @@ $(document).ready(function () {
   $(document).on("click", ".start", function() {
     start();
     $("#answer-box").focus();
-    window.scrollTo(0, 0);
+    
   })
 
   function start() {
+    window.scrollTo(0, 0);
     $("#welcome").hide();
     $("#dividend").show();
     $("#divisor").show();
@@ -66,13 +67,14 @@ $(document).ready(function () {
       console.log("The user said: " + userAnswer + ".  Proceed to Multiply.");
     
         if (userAnswer == answer) {
-          window.scrollTo(0, 0);
+         
           $("#quotient").html(userAnswer);
           $("#answer-form").val("");
           $("#answer-form").hide();
           $("#answer-formTwo").show();
           $("#answer-boxTwo").focus();
           $("#answer-boxTwo").val("");
+          window.scrollTo(0, 0);
           if (userAnswer == 0) {
             $("#error-message").text("Since your first answer is 0, you can skip this step, but it's good practice for the routine of Long Division!")
           }
